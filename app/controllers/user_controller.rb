@@ -8,5 +8,11 @@ class UserController < ApplicationController
     User.create(username: params["username"], email: params["email"], bio: params["bio"])
     puts params["username"]
     puts "HELLLLLLOOOO HTML"
+
+    #  TAG/FOR forms
+    @user = User.create("username" => params[:username], "email" => params[:email], "bio" => params[:bio])
+    puts "HELLLLLLOOOO TAG/FOR"
+    
   end
+  
 end
