@@ -1,24 +1,14 @@
-# README
+# I-Love-Forms
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Heroku's Url project : https://rado-loves-forms.herokuapp.com/
 
-Things you may want to cover:
+* Ruby version 2.5.1
 
-* Ruby version
-
-* System dependencies
+* Gem dependencies
 
 * Configuration
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
+* How to run 
 
 * Deployment instructions
 
-* ...
