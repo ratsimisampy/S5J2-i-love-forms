@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   root 'user#new'
 
-  resources :users, only: [:new, :create]
+  resources :user, only: [:new, :create]
 
   get '/new', to: 'user#new'
   post '/new', to: 'user#create'
