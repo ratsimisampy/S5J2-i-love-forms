@@ -1,0 +1,76 @@
+
+<div class="container mt-5">
+<h1>Super Formulaire</h1>
+<p>Inscris toi</p>
+</div>
+
+<div class="container mt-5"> <!-- HTML -->
+	<div class="form-group">
+	<h3>Form html</h3>
+	<form action="/new" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
+	  <div class="form-group">
+	    <label for="formGroupExampleInput">Username</label>
+	    <input type="text" class="form-control" id="formGroupExampleInput" name="username" placeholder="Jean">
+	  </div>
+	  <div class="form-group">
+	    <label for="exampleFormControlInput1">Email</label>
+	    <input type="email" class="form-control" id="exampleFormControlInput1" name="email" placeholder="name@example.com">
+	  </div>
+	  <div class="form-group">
+		<label for="exampleFormControlTextarea1">Bio</label>
+		<textarea class="form-control" id="exampleFormControlTextarea1" name="bio" rows="3"></textarea>
+		  </div>
+		  <button type="submit" class="btn btn-primary">Form html</button>
+	</form> 
+	</div>
+<hr>
+</div>
+
+<div class="container mt-5">  <!-- TAG -->
+
+	<%= form_tag('/new', class: "form-group") do %>
+	<h3>Form tag</h3>
+    <div class="form-group">
+    	<%= label_tag 'Username'%> 
+    	<%= text_field_tag 'username', @user.username, placeholder: "Paul", class: "form-control" %>
+    </div>
+    <div class="form-group">
+    	<%= label_tag 'Email'%> 
+    	<%= text_field_tag 'email', @user.email, placeholder: "mail@example.com", class: "form-control" %>
+    </div>
+    <div class="form-group">
+    	<%= label_tag 'Bio'%> 
+    	<%= text_area_tag 'bio', @user.bio, placeholder: "Something about you", class: "form-control" %>
+    </div>
+    	<%= submit_tag "Form tag", class: "btn btn-primary" %>
+
+    <% end %>
+
+
+</div>
+
+
+
+<div class="container mt-5">  <!-- FOR -->
+<hr>
+
+ 	<%= form_for @user, url: {action: "create"}, html: {class: "form-group"} do %>
+	<h3>Form for</h3>
+	<div class="form-group">
+		<%= label_tag 'Username'%> 
+    	<%= text_field_tag 'username', @user.username, placeholder: "Paul", class: "form-control" %>
+	</div>
+	<div class="form-group">
+		<%= label_tag 'Email'%> 
+    	<%= text_field_tag 'email', @user.email, placeholder: "mail@example.com", class: "form-control" %>
+	</div>
+	<div class="form-group">
+		<%= label_tag 'Bio'%> 
+    	<%= text_area_tag 'bio', @user.bio, placeholder: "Something about you", class: "form-control" %>
+	</div>
+		<%= submit_tag "Form for", class: "btn btn-primary" %>
+
+	<% end %>
+
+</div>
