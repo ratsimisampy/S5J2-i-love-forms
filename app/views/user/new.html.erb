@@ -11,7 +11,7 @@
     <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
 	  <div class="form-group">
 	    <label for="formGroupExampleInput">Username</label>
-	    <input type="text" class="form-control" id="formGroupExampleInput" name="username" placeholder="Jean">
+	    <input type="text" class="form-control" id="formGroupExampleInput" name="username" placeholder="full name">
 	  </div>
 	  <div class="form-group">
 	    <label for="exampleFormControlInput1">Email</label>
@@ -33,7 +33,7 @@
 	<h3>Form tag</h3>
     <div class="form-group">
     	<%= label_tag 'Username'%> 
-    	<%= text_field_tag 'username', @user.username, placeholder: "Paul", class: "form-control" %>
+    	<%= text_field_tag 'username', @user.username, placeholder: "fullname", class: "form-control" %>
     </div>
     <div class="form-group">
     	<%= label_tag 'Email'%> 
@@ -59,7 +59,7 @@
 	<h3>Form for</h3>
 	<div class="form-group">
 		<%= label_tag 'Username'%> 
-    	<%= text_field_tag 'username', @user.username, placeholder: "Paul", class: "form-control" %>
+    	<%= text_field_tag 'username', @user.username, placeholder: "Fullname", class: "form-control" %>
 	</div>
 	<div class="form-group">
 		<%= label_tag 'Email'%> 
