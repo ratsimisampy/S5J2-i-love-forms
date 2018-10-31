@@ -2,13 +2,31 @@
 
 * Heroku's Url project : https://rado-loves-forms.herokuapp.com/
 
-* Ruby version 2.5.1
+## Dependencies
+'''
+Heroku server
+Postgresql database
+Bootstrap
+...
+'''
 
-* Gem dependencies
+## Instalation and running guide
+'''
+on your localhost: $
+clone repo
+run $ rails s
+then go to your http://localhost:3000/
+'''
 
-* Configuration
+## Routes
+'''
+root GET  /                 user#new
+new GET  /new(.:format)     user#new
+POST /new(.:format)         user#create
+'''
+## Team
 
-* How to run 
-
-* Deployment instructions
-
+* @Matthieu M
+* @Kalisp
+* @Tomroumeg
+* @Rado
